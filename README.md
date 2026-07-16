@@ -1,20 +1,16 @@
-# INTERN DETAILS 
+# INTERN DETAILS
+**NAME :** SURYA R M
+**INTERN_ID :** CITS4229
 
-   NAME : SURYA R M
-   
-   INTERN_ID : CITS4229
 # Cloud Native CI/CD Pipeline
 
 ## Project Overview
-
 This project demonstrates an end-to-end Continuous Integration and Continuous Deployment (CI/CD) pipeline using GitHub Actions and AWS EC2.
-
 The application is automatically deployed whenever changes are pushed to the GitHub repository, eliminating manual deployment processes and showcasing modern DevOps practices.
 
 ---
 
 ## Features
-
 - Automated deployment using GitHub Actions
 - Secure deployment using SSH authentication
 - Cloud hosting using AWS EC2
@@ -25,7 +21,6 @@ The application is automatically deployed whenever changes are pushed to the Git
 ---
 
 ## Architecture
-
 ```text
 Developer
     ↓
@@ -41,7 +36,6 @@ Automated Website Deployment
 ---
 
 ## Technologies Used
-
 | Technology | Purpose |
 |------------|----------|
 | HTML | Frontend Development |
@@ -57,7 +51,6 @@ Automated Website Deployment
 ---
 
 ## Project Structure
-
 ```text
 Cloud-Native-CICD-Pipeline/
 │
@@ -65,7 +58,7 @@ Cloud-Native-CICD-Pipeline/
 │   └── workflows/
 │       └── deploy.yml
 │
-├── screenshots/
+├── Screenshots/
 │
 ├── index.html
 ├── style.css
@@ -76,7 +69,6 @@ Cloud-Native-CICD-Pipeline/
 ---
 
 ## Workflow
-
 1. Developer pushes code changes to GitHub.
 2. GitHub Actions workflow is triggered automatically.
 3. Workflow authenticates with AWS EC2 using SSH keys.
@@ -93,7 +85,6 @@ Cloud-Native-CICD-Pipeline/
 - Region: ap-south-1 (Mumbai)
 
 ### Security Group Rules
-
 | Type | Port |
 |------|------|
 | SSH | 22 |
@@ -102,7 +93,6 @@ Cloud-Native-CICD-Pipeline/
 ---
 
 ## GitHub Secrets
-
 The following repository secrets were configured:
 
 | Secret Name | Description |
@@ -116,11 +106,9 @@ The following repository secrets were configured:
 ## Deployment Steps
 
 ### Launch EC2 Instance
-
 Create an Amazon Linux EC2 instance and configure security groups.
 
 ### Install Apache Server
-
 ```bash
 sudo yum update -y
 sudo yum install httpd -y
@@ -129,25 +117,19 @@ sudo systemctl enable httpd
 ```
 
 ### Configure GitHub Secrets
-
 Add the following secrets in:
-
 ```text
 Repository → Settings → Secrets and Variables → Actions
 ```
-
 - EC2_HOST
 - EC2_USER
 - EC2_SSH_KEY
 
 ### Configure GitHub Actions
-
 Create a workflow file inside:
-
 ```text
 .github/workflows/deploy.yml
 ```
-
 The workflow automatically deploys the application whenever changes are pushed to the `main` branch.
 
 ---
@@ -155,24 +137,44 @@ The workflow automatically deploys the application whenever changes are pushed t
 ## Screenshots
 
 ### EC2 Instance
-![EC2 Instance](screenshots/ec2-instance.png)
+![EC2 Instance](Screenshots/EC2.png)
+
+### EC2 Code / Deployment Script
+![EC2 Code](Screenshots/EC2_code.png)
+
+### EC2 Verification
+![EC2 Verification](Screenshots/EC2_verification.png)
+
+### Live Server Output
+![Live Server](Screenshots/Live_Server.png)
+
+### Apache Web Server
+![Apache](Screenshots/Apache.png)
 
 ### Security Group Configuration
-![Security Group](screenshots/security-group.png)
+![Security Groups](Screenshots/Security_groups.png)
 
-### GitHub Secrets
-![GitHub Secrets](screenshots/github-secrets.png)
+### GitHub Secrets Configuration
+![Secret Repos](Screenshots/Secret_repos.png)
 
-### GitHub Actions Workflow
-![GitHub Actions](screenshots/github-actions.png)
+### GitHub Actions Rules
+![Rules](Screenshots/Rules.png)
 
-### Automated Deployment Dashboard
-![Dashboard](screenshots/final-dashboard.png)
+### CI/CD Pipeline Working
+![CICD Working](Screenshots/CICD_working.png)
+
+### Working Pipeline Run
+![Working Pipeline](Screenshots/Working_pipeline.png)
+
+### Changed File Deployment
+![Changed File](Screenshots/Changed_file.png)
+
+### Updated Website
+![Updated](Screenshots/Updated.png)
 
 ---
 
 ## Learning Outcomes
-
 - Understanding CI/CD concepts
 - Implementing deployment automation
 - Working with GitHub Actions workflows
@@ -184,13 +186,8 @@ The workflow automatically deploys the application whenever changes are pushed t
 ---
 
 ## Future Enhancements
-
 - Docker containerization
 - Infrastructure as Code using Terraform
 - Monitoring with CloudWatch
 - SSL configuration using HTTPS
 - Multi-environment deployment pipeline
-
----
-
-
