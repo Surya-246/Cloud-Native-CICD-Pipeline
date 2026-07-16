@@ -193,17 +193,4 @@ The workflow automatically deploys the application whenever changes are pushed t
 
 ---
 
-## Author
 
-Surya R M
-
-MCA – Storage and Cloud Technology  
-Jain University
-
-GitHub: https://github.com/Surya-246
-
----
-
-## License
-
-This project is licensed under the MIT License.
